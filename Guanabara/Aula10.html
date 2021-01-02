@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOC</title>
+
+    <style> 
+        div#area {
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height:200px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> Aula 10 Eventos DOM </h1>
+    <div id="area" onclick="clicar()" onmouseout="sair()" onmouseover ="sair()">
+            interaja.....
+        
+    </div>
+    <p>Eventos DOM Exemplos : mouseenter mousemove mousedown </p>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('onmouseover', entrar)
+        a.addEventListener('onmouseoutsite',sair)
+
+        function  clicar() {
+            a.innerText = 'Clicou'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou...'
+        }
+        
+        function sair() {
+            a.innerText = 'Saiu'
+        }
+    </script>
+</body>
+</html>
