@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições Simples</title>
+</head>
+<body>
+    <h1>Condição Simples</h1>
+    Pais <input type="text" id="text"name="txt">
+    <input type="button" value='Verificar' onclick='calcular()'>
+
+    <div id=res>
+
+    </div>
+
+    <script>
+
+        function calcular() {
+            var pais = 'EUA'
+            var  txtv = document.getElementById('txt')
+                if (pais == 'Brasil') {
+                console.log('Brasileiro')
+                } else {
+                console.log('Estrangeiro')
+                }           
+        }
+        res.innerHTML += `<p> ${pais}`
+        
+    </script>
+    
+       
+    
+</body>
+</html>

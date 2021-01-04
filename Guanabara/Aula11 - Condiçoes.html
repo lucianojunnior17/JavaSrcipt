@@ -7,5 +7,28 @@
 </head>
 <body>
     <h1> Curso de JavaScript Aula #11 Condições </h1>
+    <H2>Sistema de Multas</H2>
+    velocidade do Carro : <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+
+<div id="res">
+
+</div>
+
+    <script>
+        
+        function calcular() {
+            var txtv = document.getElementById('txtvel')
+            var res =window.document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML =  `<p> Sua Velocidade Atual é de ${vel} Km/h</p>`
+            if (vel > 60) {
+                res.innerHTML =`<p> Voçê foi MULTADO por exesso de velocidade </p>`
+            }
+            res.innerHTML  += `<p> Dirija Sempre com cinto de Segurança </p>`
+
+
+        }
+    </script>
 </body>
 </html>
