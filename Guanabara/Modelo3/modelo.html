@@ -13,9 +13,24 @@
    
     <section>
         <div> 
-            testes
-
+            <p> Ano de Nascimento: 
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p> Sexo :
+                <input type="radio" name="radsex" id="nasc" checked>
+                <label for="nasc"> Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="radsex">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
         </div>
+
+        <div id="res">
+            Preecha os dados acima para ver o resultado
+        </div>
+
     </section>
 
     <footer> 
