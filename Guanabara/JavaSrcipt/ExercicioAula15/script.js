@@ -8,10 +8,15 @@ function contar() {
         window.alert('ERRO falta dados Por favor indira um número')
 
     } else {
-        res.innerHTML = 'Contando: '
+        res.innerHTML = 'Contando: <br> '
         let i = Number(ini.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
+
+        if (p <= 0) {
+            window.alert('Passo Invalido Repita o procedimento')
+            p = 1
+        }
 
         if (i < f) { //contangem crescente
             for (let c = i; c <=f; c += p) {
