@@ -7,3 +7,10 @@ num.sort() //Ordenar os números
 console.log(num)
 console.log(`O Vetor tem ${num.length} posições`)
 console.log(` o Vetor tem ${num} elementos`)
+
+
+/* for (variavel a ser criada ; teste lógico ; oq a variavel vai fazer ) {
+    console.log( variavel)
+
+} */
+
