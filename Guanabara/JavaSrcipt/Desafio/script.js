@@ -26,6 +26,7 @@ function calcular() {
         let item = document.createElement('option')
         item.text = `Valor ${num.value} Adicionado`
         lista.appendChild(item)
+        res.innerHTML = ''
                 
     } else {
         window.alert('Valor Invalido')
@@ -39,8 +40,25 @@ function finalizar() {
         window.alert('Adicone Valores por favor')
     } else {
         let tot = valores.length
-
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media =0
+        for(let pos in valores) {
+            soma += valores[pos]
+            if (valores[pos] > maior)
+            maior = valores[pos]
+            if (valores[pos] < menor) {
+                menor = valores[pos]                               
+            }
+        }
+        media = soma /tot
         res.innerHTML = ''
-        res.innerHTML += `<p> Ap todo foram ${tot} valores adicionados </p>`
+        res.innerHTML += `<p> Ao todo foram ${tot} valores adicionados </p>`
+        res.innerHTML += `<p> O maior valor informado foi ${maior}`
+        res.innerHTML += `<p> O menor valor informado foi ${menor}`
+        res.innerHTML += `<p> Somando todos os valore temos ${soma}`
+        res.innerHTML += `<p>  A média dos valores cadastrados é ${media}`
+        
     }
 }
